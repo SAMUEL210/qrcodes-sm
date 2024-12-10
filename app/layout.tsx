@@ -3,7 +3,7 @@ import { Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 
 const RobotoCondensed = Roboto_Condensed({
-  weight: ["100", "900"],
+  weight: ["400", "900"],
 });
 
 export const metadata: Metadata = {
