@@ -3,8 +3,8 @@ import QrCodesGenerator from "./components/QrCodesGenerator";
 
 export default function Home() {
   return (
-    <div className="relative min-h-[100vh] h-full flex justify-center items-center">
-
+    <div className="relative min-h-[100vh] h-full flex flex-col justify-center items-center">
+      <QrCodesGenerator />
       <Image
         src="/glass.png"
         width={1600}
