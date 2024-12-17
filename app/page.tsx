@@ -1,5 +1,5 @@
 import Image from "next/image";
-import QrCodesGenerator from "./components/QrCodesGenerator";
+import QrCodesGenerator from "../components/QrCodesGenerator";
 
 export default function Home() {
   return (
