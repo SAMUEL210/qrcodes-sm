@@ -32,6 +32,7 @@ export default function QrCodesGenerator() {
             if (type === "png") {
                 toPng(qrCodeElem)
                     .then((dataUrl) => {
+                        console.log(dataUrl)
                         saveAs(dataUrl, "qr-code.png");
                     })
                     .catch((err) => {
@@ -220,13 +221,16 @@ export default function QrCodesGenerator() {
                             <span>
                                 <LayoutGrid className="absolute top-4 right-4 w-8 h-8 text-white" />
                             </span>
-                            <div id="qr-code" className="flex justify-center">
+                            <div id="qr-code" className="flex justify-center p-8">
                                 <div className="relative">
                                     <QRCodeSVG
+                                        className="rounded-lg"
                                         value={url}
                                         size={256}
                                         fgColor={color}
                                         bgColor={bgColor}
+                                        level="H"
+                                        marginSize={2}
                                         imageSettings={
                                             logo ? { src: logo, height: 50, width: 50, excavate: true } : undefined
                                         }
